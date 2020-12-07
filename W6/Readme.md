@@ -42,6 +42,12 @@ Odpowiedź:
 with open('kowalecki_175ic_txt.txt', 'r') as reader:
   print(reader.read())
  ```
+ Odpowiedź:
+<br>Kowalecki 175IC
+<br>Linia  2 
+<br>Linia 3
+<br>Linia 4
+
  
 ### Czytanie po 5 bajtów z pliku
 ```
@@ -50,12 +56,18 @@ with open('kowalecki_175ic_txt.txt', 'r') as reader:
   print(reader.readline(5))
   print(reader.readline(5))
  ```
- 
+  Odpowiedź:
+<br>Kowal
+<br>ecki 
+<br>175IC
+
 ### Zwrócenie tekstu jako listę
 ```
 f = open('kowalecki_175ic_txt.txt')
 f.readlines()
 ```
+Odpowiedź:
+<br> ['Kowalecki 175IC\n', 'Linia  2 \n', 'Linia 3\n', 'Linia 4\n']
 
 ### Iterowanie po każdej linii w pliku na 3 różne sposoby
 
@@ -76,6 +88,11 @@ with open('kowalecki_175ic_txt.txt', 'r') as reader:
      for line in reader:
          print(line, end='')
 ```
+W każdym wypadku odpowiedź wygląda następująco:
+<br>Kowalecki 175IC
+<br>Linia  2 
+<br>Linia 3
+<br>Linia 4
 
 ### Zapis do pliku
 ```
@@ -90,11 +107,19 @@ with open('kowalecki_175ic_write.txt', 'r') as reader:
       print(reader.read())
 ```
 
+Zapis do pliku odwrotnej zawartości i wyświetlenie jej:
+<br>Linia 4
+<br>Linia 3
+<br>Linia  2 
+<br>Kowalecki 175IC
+
 ### Praca z bajtami - wczytanie pliku
 ```
 with open('kowalecki_175ic_write.txt', 'rb') as reader:
     print(reader.readline())
 ```
+Odpowiedź:
+<br>b'Linia 4\n'
 
 ### Wczytanie obrazu i wyświetlenie jego danych
 ```
@@ -105,4 +130,10 @@ with open('test.jpg', 'rb') as byte_reader:
      print(byte_reader.read(1))
      print(byte_reader.read(1))
 ```
+Odpowiedź:
+<br>b'\xff'
+<br>b'\xd8\xff\xe0'
+<br>b'\x00\x10'
+<br>b'J'
+<br>b'F'
 
